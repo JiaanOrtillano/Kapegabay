@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F1EA"
-    tools:context=".Login">
+    tools:context=".MainActivity">
 
 
     <LinearLayout
@@ -50,14 +50,34 @@
 
 
                 <EditText
-                    android:id="@+id/name_et"
+                    android:id="@+id/etName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Name"
-                    android:minHeight="48dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/input_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Email"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -73,14 +93,14 @@
 
 
                 <EditText
+                    android:id="@+id/etNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Number"
-                    android:inputType="phone"
-                    android:minHeight="48dp" />
+                    android:inputType="phone" />
             </LinearLayout>
 
             <!-- Input: Address -->
@@ -95,13 +115,13 @@
 
 
                 <EditText
+                    android:id="@+id/etAddress"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
-                    android:hint="Address"
-                    android:minHeight="48dp" />
+                    android:hint="Address" />
             </LinearLayout>
 
             <!-- Input: Password -->
@@ -123,14 +143,14 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Password"
-                    android:inputType="textPassword"
-                    android:minHeight="48dp" />
+                    android:inputType="textPassword" />
 
 
             </LinearLayout>
 
             <!-- Sign Up Button -->
             <Button
+                android:id="@+id/btnSignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -181,15 +201,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="4dp"
-                android:text="Dont have an account? "
+                android:text="Already have an account? "
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tvSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="sign up"
+                android:text="sign in"
                 android:textColor="#00C853"
                 android:textSize="14sp"
                 android:textStyle="bold" />
