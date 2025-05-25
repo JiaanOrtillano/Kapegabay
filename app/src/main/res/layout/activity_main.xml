@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F1EA"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,11 +82,12 @@
 
                 <EditText
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
                     android:hint="Email Address"
                     android:inputType="textEmailAddress"
-                    android:background="@android:color/transparent"/>
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <!-- Password Input -->
@@ -108,11 +109,12 @@
 
                 <EditText
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    android:background="@android:color/transparent"/>
+                    android:minHeight="48dp" />
 
 
             </LinearLayout>
@@ -128,18 +130,21 @@
                 android:layout_marginBottom="16dp"/>
 
             <!-- Login Button -->
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="LOGIN"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#6F4E37"
-                android:layout_marginBottom="16dp">
-
-            </Button>
 
 
             <!-- OR login with -->
+            <Button
+                android:id="@+id/login_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#6F4E37"
+                android:text="Log In"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF" />
+
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -185,13 +190,14 @@
                 android:textSize="14sp"/>
 
             <TextView
+                android:id="@+id/signup_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="sign up"
                 android:textColor="#4CAF50"
                 android:textSize="14sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F1EA"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
 
     <LinearLayout
@@ -50,12 +50,14 @@
 
 
                 <EditText
+                    android:id="@+id/name_et"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Name"
+                    android:minHeight="48dp"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -77,7 +79,8 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Number"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <!-- Input: Address -->
@@ -97,7 +100,8 @@
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
-                    android:hint="Address" />
+                    android:hint="Address"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <!-- Input: Password -->
@@ -119,7 +123,8 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Password"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:minHeight="48dp" />
 
 
             </LinearLayout>
