@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         // UI references
         val etEmail    = findViewById<EditText>(R.id.etEmail)
         val etPassword = findViewById<EditText>(R.id.etPassword)
-        val btnLogin   = findViewById<Button>(R.id.btnLogin)
-        val tvSignUp   = findViewById<TextView>(R.id.tvSignUp)
+        val btnLogin   = findViewById<Button>(R.id.login_bt)
+        val tvSignUp   = findViewById<TextView>(R.id.btnSignup)
 
         // SIGN-UP LINK
         tvSignUp.setOnClickListener {
