@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/input_bg"
+                android:textColor="@color/black"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="12dp">
@@ -65,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/input_bg"
+                android:textColor="@color/black"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="12dp">
@@ -97,6 +99,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Number"
@@ -119,6 +122,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Address" />
@@ -140,6 +144,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Password"
