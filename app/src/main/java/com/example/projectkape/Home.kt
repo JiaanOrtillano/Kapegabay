@@ -1,6 +1,7 @@
 package com.example.projectkape
 
 import CardAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -21,9 +22,12 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
+
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         val menuButton: ImageView = findViewById(R.id.menu_button)
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val menuProfile: ImageView = findViewById(R.id.menuProfile)
+
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val items = listOf(
@@ -33,8 +37,6 @@ class Home : AppCompatActivity() {
             CardItem("Organic Fertilizer Tips", "Using coffee grounds as fertilizer...", R.drawable.image_31, "Pananim")
         )
 
-
-
         val adapter = CardAdapter(items)
         recyclerView.adapter = adapter
 
@@ -42,5 +44,10 @@ class Home : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+        // profile sa UI
+        menuProfile.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
     }
 }
