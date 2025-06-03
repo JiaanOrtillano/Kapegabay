@@ -111,7 +111,7 @@ class AuthController {
             if ($user) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
-                $_SESSION['role'] = 'user';
+                $_SESSION['role'] = 'admin';
                 header('Location: /dashboard');
                 exit();
             }
@@ -130,6 +130,24 @@ class AuthController {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $role;
+        
+        // Record login activity
+        $this->recordLoginActivity($user['id'], $user['username'], $role);
+    }
+
+    private function recordLoginActivity($userId, $username, $role) {
+        try {
+            $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
+            $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
+            
+            $stmt = $this->db->prepare("
+                INSERT INTO login_activities (user_id, username, role, ip_address, user_agent)
+                VALUES (?, ?, ?, ?, ?)
+            ");
+            $stmt->execute([$userId, $username, $role, $ipAddress, $userAgent]);
+        } catch (\Exception $e) {
+            error_log("Error recording login activity: " . $e->getMessage());
+        }
     }
 
     public function register() {

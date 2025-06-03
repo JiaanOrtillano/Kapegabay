@@ -62,7 +62,7 @@ try {
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/analytics" class="flex items-center gap-4 px-4 py-3 rounded-2xl font-medium transition 
+                    <a href="analytics" class="flex items-center gap-4 px-4 py-3 rounded-2xl font-medium transition 
                         <?= strpos($current_uri, '/admin/analytics') !== false ? 'bg-[#7b5434] text-white shadow' : 'text-[#7b5434] hover:bg-[#7b5434] hover:text-white' ?>">
                         <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
                             <rect x="4" y="10" width="3" height="7" rx="1.5"/>
@@ -83,7 +83,7 @@ try {
                     </a>
                 </li>
                 <li>
-                    <a href="/notifications" class="flex items-center gap-4 px-4 py-3 rounded-2xl font-medium transition 
+                    <a href="/notification" class="flex items-center gap-4 px-4 py-3 rounded-2xl font-medium transition 
                         <?= strpos($current_uri, '/notifications') !== false ? 'bg-[#7b5434] text-white shadow' : 'text-[#7b5434] hover:bg-[#7b5434] hover:text-white' ?>">
                         <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
                             <path d="..."/>
