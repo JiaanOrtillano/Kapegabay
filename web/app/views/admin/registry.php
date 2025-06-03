@@ -5,7 +5,7 @@ use root_dev\Config\Database;
 
 $db = Database::connect();
 // Fetch all users (farmers)
-$sql = "SELECT id, username, email, created_at as date_registered, role as status FROM users ORDER BY created_at DESC";
+$sql = "SELECT id, username, email, created_at as date_registered, role as status FROM users WHERE role != 'admin' ORDER BY created_at DESC";
 $stmt = $db->query($sql);
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

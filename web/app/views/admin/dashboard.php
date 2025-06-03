@@ -13,6 +13,11 @@ $sql = "SELECT COUNT(*) as total FROM users";
 $stmt = $db->query($sql);
 $totalUsers = $stmt->fetch(\PDO::FETCH_ASSOC)['total'];
 
+// Get recent login activities
+$sql = "SELECT * FROM login_activities ORDER BY login_time DESC LIMIT 10";
+$stmt = $db->query($sql);
+$recentLogins = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
 // Example data for demo
 $fcaActivity = 320;
 $platformViews = 15400;
@@ -117,6 +122,34 @@ $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
                 padding: 1.2rem 0.5rem;
             }
         }
+        .activity-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .activity-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .activity-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .username {
+            font-weight: 600;
+            color: #7b5434;
+        }
+        .role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .activity-time {
+            color: #888;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -150,6 +183,30 @@ $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
                     FCA Activity Overview
                 </div>
                 <canvas id="fcaActivityChart" height="220"></canvas>
+            </div>
+        </div>
+        
+        <!-- Recent Login Activities -->
+        <div class="card" style="margin-top: 2rem;">
+            <div class="card-title">
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z" fill="#7b5434"/>
+                    <path d="M10 6v4l3 2" stroke="#a6b98a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                Recent Login Activities
+            </div>
+            <div id="loginActivities" class="activity-list">
+                <?php foreach ($recentLogins as $login): ?>
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <span class="username"><?php echo htmlspecialchars($login['username']); ?></span>
+                            <span class="role">(<?php echo htmlspecialchars($login['role']); ?>)</span>
+                        </div>
+                        <div class="activity-time" data-time="<?php echo $login['login_time']; ?>">
+                            <?php echo date('M d, Y H:i:s', strtotime($login['login_time'])); ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -201,6 +258,60 @@ $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
                 }
             }
         });
+        
+        // Function to update relative time
+        function updateRelativeTimes() {
+            document.querySelectorAll('.activity-time').forEach(element => {
+                const timestamp = new Date(element.dataset.time).getTime();
+                const now = new Date().getTime();
+                const diff = now - timestamp;
+                
+                let timeString;
+                if (diff < 60000) { // Less than 1 minute
+                    timeString = 'just now';
+                } else if (diff < 3600000) { // Less than 1 hour
+                    const minutes = Math.floor(diff / 60000);
+                    timeString = `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+                } else if (diff < 86400000) { // Less than 1 day
+                    const hours = Math.floor(diff / 3600000);
+                    timeString = `${hours} hour${hours > 1 ? 's' : ''} ago`;
+                } else {
+                    const days = Math.floor(diff / 86400000);
+                    timeString = `${days} day${days > 1 ? 's' : ''} ago`;
+                }
+                
+                element.textContent = timeString;
+            });
+        }
+
+        // Update times initially and every minute
+        updateRelativeTimes();
+        setInterval(updateRelativeTimes, 60000);
+
+        // Function to refresh login activities
+        function refreshLoginActivities() {
+            fetch('/admin/get-recent-logins')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('loginActivities');
+                    container.innerHTML = data.map(login => `
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <span class="username">${login.username}</span>
+                                <span class="role">(${login.role})</span>
+                            </div>
+                            <div class="activity-time" data-time="${login.login_time}">
+                                ${new Date(login.login_time).toLocaleString()}
+                            </div>
+                        </div>
+                    `).join('');
+                    updateRelativeTimes();
+                })
+                .catch(error => console.error('Error fetching login activities:', error));
+        }
+
+        // Refresh activities every 30 seconds
+        setInterval(refreshLoginActivities, 30000);
     </script>
 </body>
 </html>

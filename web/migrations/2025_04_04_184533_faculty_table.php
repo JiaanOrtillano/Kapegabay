@@ -19,4 +19,20 @@ class CreateUsersTable {
         ";
         $pdo->exec($query);
     }
+
+    public function createLoginActivitiesTable($pdo) {
+        $query = "
+            CREATE TABLE login_activities (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                username TEXT NOT NULL,
+                role TEXT NOT NULL,
+                login_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+                ip_address TEXT,
+                user_agent TEXT,
+                FOREIGN KEY (user_id) REFERENCES users(id)
+            )
+        ";
+        $pdo->exec($query);
+    }
 }
