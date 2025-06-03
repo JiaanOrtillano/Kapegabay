@@ -44,10 +44,10 @@ $messages = $msg_stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                 <?php endforeach; ?>
             </div>
-            <form class="flex items-center border-t p-4 bg-gray-100" method="post" action="">
+            <!-- <form class="flex items-center border-t p-4 bg-gray-100" method="post" action="">
                 <input type="text" name="message" class="flex-1 rounded-lg border px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-orange-200" placeholder="Type your message..." disabled />
                 <button type="submit" class="bg-orange-400 hover:bg-orange-500 text-white font-semibold px-5 py-2 rounded-lg" disabled>Send</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </body>
