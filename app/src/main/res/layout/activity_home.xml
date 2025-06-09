@@ -80,22 +80,25 @@
             app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
+                android:id="@+id/tab_all"
+                style="@style/FilterTabStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All"
-                style="@style/FilterTabStyle" />
+                android:text="All" />
 
             <TextView
+                android:id="@+id/tab_videos"
+                style="@style/FilterTabStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Videos"
-                style="@style/FilterTabStyle" />
+                android:text="Videos" />
 
             <TextView
+                android:id="@+id/tab_vlog"
+                style="@style/FilterTabStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vlog"
-                style="@style/FilterTabStyle" />
+                android:text="Vlog" />
         </LinearLayout>
 
         <!-- Content List -->
@@ -129,13 +132,41 @@
             android:layout_marginBottom="24dp"/>
 
         <!-- Menu Items -->
-        <TextView style="@style/DrawerMenuItem" android:text="Home"/>
-        <TextView style="@style/DrawerMenuItem" android:text="Knowledge Hub"/>
-        <TextView style="@style/DrawerMenuItem" android:text="Forms"/>
-        <TextView style="@style/DrawerMenuItem" android:text="Farm Calendar"/>
-        <TextView style="@style/DrawerMenuItem" android:text="Notifications"/>
-        <TextView style="@style/DrawerMenuItem" android:text="Support"/>
-        <TextView style="@style/DrawerMenuItem" android:text="About"/>
+        <TextView
+            android:id="@+id/nav_home"
+            style="@style/DrawerMenuItem"
+            android:text="Home" />
+
+        <TextView
+            android:id="@+id/nav_knowledge_hub"
+            style="@style/DrawerMenuItem"
+            android:text="Knowledge Hub" />
+
+        <TextView
+            android:id="@+id/nav_forms"
+            style="@style/DrawerMenuItem"
+            android:text="Forms" />
+
+        <TextView
+            android:id="@+id/nav_farm_calendar"
+            style="@style/DrawerMenuItem"
+            android:text="Farm Calendar" />
+
+        <TextView
+            android:id="@+id/nav_notifications"
+            style="@style/DrawerMenuItem"
+            android:text="Notifications" />
+
+        <TextView
+            android:id="@+id/nav_support"
+            style="@style/DrawerMenuItem"
+            android:text="Support" />
+
+        <TextView
+            android:id="@+id/nav_about"
+            style="@style/DrawerMenuItem"
+            android:text="About" />
+
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
