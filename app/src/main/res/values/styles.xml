@@ -4,4 +4,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <style name="KnowledgeButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:backgroundTint">#F2F2F2</item>
+        <item name="android:textColor">#5C4439</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
 </resources>
