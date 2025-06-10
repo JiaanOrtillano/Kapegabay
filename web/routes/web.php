@@ -33,6 +33,12 @@ $routes = [
     '/user_message' => ['view', 'user_message', true, 'user'],
     '/view_messages' => ['view', 'view_messages', true, 'user'],
     '/settings' => ['view', 'settings', true, 'user'],
+    '/notification' => ['view', 'notification', true, 'user'],
+    '/view_notification' => ['view', 'view_notification', true, 'user'],
+      '/analytics' => ['view', 'analytics', true, 'user'],
+      '/logs' => ['view', 'logs', true, 'user'],
+
+
 
 
     '/about' => ['view', 'about', true, 'user'],
@@ -43,7 +49,7 @@ $routes = [
     '/admin/users' => [ProfileController::class, 'usersList', true, 'admin'],
     '/admin/users/edit' => [ProfileController::class, 'editUser', true, 'admin'],
     '/admin/users/delete' => [ProfileController::class, 'deleteUser', true, 'admin'],
-    '/admin/home' => ['view', 'admin/home', true, 'admin'],
+    '/admin/profile' => ['view', 'admin/profile', true, 'admin'],
     '/admin/about' => ['view', 'admin/about', true, 'admin'],
     '/admin/registry' => ['view', 'admin/registry', true, 'admin'],
     '/admin/knowledge' => ['view', 'admin/knowledge', true, 'admin'],
@@ -51,7 +57,9 @@ $routes = [
     '/admin/sent_notifications' => ['view', 'admin/sent_notifications', true, 'admin'],
     '/admin/message' => [MessageController::class, 'index', true, 'admin'],
     '/admin/contact' => ['view', 'admin/contact', true, 'admin'],
-    '/admin/profile' => ['view', 'admin/profile', true, 'admin'],
+    '/admin/reports' => ['view', 'admin/reports', true, 'admin'],
+  
+
 
 
     // Message routes
