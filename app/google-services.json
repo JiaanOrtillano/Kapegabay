@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "927559212836",
+    "project_id": "kapegabay",
+    "storage_bucket": "kapegabay.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927559212836:android:3b35e0494bf1429cbfddb1",
+        "android_client_info": {
+          "package_name": "com.example.projectkape"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmv12puy1zs14Tf8vAfYGsB34b6WZss7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

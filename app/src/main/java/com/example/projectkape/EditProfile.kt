@@ -50,14 +50,16 @@ class EditProfile : AppCompatActivity() {
         editName = findViewById(R.id.editName)
         editAddress = findViewById(R.id.editAddress)
         saveButton = findViewById(R.id.saveButton)
-        profilePicUpload = findViewById(R.id.profilePicUpload)
+        profilePicUpload = findViewById(R.id.profilePicUpload) // Your "I-edit" TextView
 
         loadSavedProfile()
 
+        // Click on image to pick a new photo
         profilePhoto.setOnClickListener {
             pickImageLauncher.launch("image/*")
         }
 
+        // Click on "I-edit" to pick a new photo
         profilePicUpload.setOnClickListener {
             pickImageLauncher.launch("image/*")
         }
