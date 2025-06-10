@@ -2,58 +2,82 @@ package com.example.projectkape
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
-import com.example.projectkape.R.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class SignUp : AppCompatActivity() {
 
-    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var firestore: FirebaseFirestore
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(layout.activity_signup)
+        setContentView(R.layout.activity_signup)
 
+        // Initialize Firebase
+        firestore = FirebaseFirestore.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         val tvSignIn = findViewById<TextView>(R.id.tvSignIn)
+        val etName = findViewById<EditText>(R.id.etName)
+        val etNumber = findViewById<EditText>(R.id.etNumber)
+        val etEmail = findViewById<EditText>(R.id.etEmail)
+        val etAddress = findViewById<EditText>(R.id.etAddress)
+        val etPassword = findViewById<EditText>(R.id.passwordInput)
+        val btnRegister = findViewById<Button>(R.id.btnSignup)
+
         tvSignIn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
-        dbHelper = DatabaseHelper(this)
-
-        val etName = findViewById<EditText>(id.etName)
-        val etNumber = findViewById<EditText>(id.etNumber)
-        val etEmail = findViewById<EditText>(id.etEmail)
-        val etAddress = findViewById<EditText>(id.etAddress)
-        val etPassword = findViewById<EditText>(id.passwordInput)
-        val btnRegister = findViewById<Button>(id.btnSignup)
-
         btnRegister.setOnClickListener {
-            val name = etName.text.toString()
-            val email = etEmail.text.toString()
-            val number = etNumber.text.toString()
-            val address = etAddress.text.toString()
+            val name = etName.text.toString().trim()
+            val email = etEmail.text.toString().trim()
+            val number = etNumber.text.toString().trim()
+            val address = etAddress.text.toString().trim()
             val password = etPassword.text.toString()
 
-            val success = dbHelper.insertUser(name, email, number, address, password)
-
-            if (success) {
-                Toast.makeText(this, "User Registered!", Toast.LENGTH_SHORT).show()
-                etName.text.clear()
-                etEmail.text.clear()
-                etNumber.text.clear()
-                etAddress.text.clear()
-                etPassword.text.clear()
-            } else {
-                Toast.makeText(this, "Registration Failed", Toast.LENGTH_SHORT).show()
+            if (name.isEmpty() || email.isEmpty() || number.isEmpty() || address.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
+
+            // Create user using Firebase Authentication
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val userId = auth.currentUser!!.uid
+
+                        val user = hashMapOf(
+                            "name" to name,
+                            "email" to email,
+                            "number" to number,
+                            "address" to address
+                        )
+
+                        // Save user data to Firestore
+                        firestore.collection("users")
+                            .document(userId)
+                            .set(user)
+                            .addOnSuccessListener {
+                                Toast.makeText(this, "User Registered!", Toast.LENGTH_SHORT).show()
+                                etName.text.clear()
+                                etEmail.text.clear()
+                                etNumber.text.clear()
+                                etAddress.text.clear()
+                                etPassword.text.clear()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(this, "Registration failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                            }
+                    } else {
+                        Toast.makeText(this, "Authentication failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
     }
 }

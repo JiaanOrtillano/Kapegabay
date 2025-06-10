@@ -22,15 +22,26 @@ class FarmCalendar : AppCompatActivity() {
 
     private fun showAddEventDialog() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_add_event, null)
+        val eventTitle = dialogView.findViewById<EditText>(R.id.eventTitle)
+        val eventDescription = dialogView.findViewById<EditText>(R.id.eventNotes)
+
         val builder = AlertDialog.Builder(this)
             .setView(dialogView)
             .setTitle("Add New Event")
             .setPositiveButton("Save") { _, _ ->
-                // Handle form submission
-                Toast.makeText(this, "✅ Event successfully added", Toast.LENGTH_SHORT).show()
+                val title = eventTitle.text.toString().trim()
+                val description = eventDescription.text.toString().trim()
+
+                if (title.isNotEmpty()) {
+                    // TODO: Save to Firebase or local storage
+                    Toast.makeText(this, "✅ Event '$title' added", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "❗ Event title cannot be empty", Toast.LENGTH_SHORT).show()
+                }
             }
             .setNegativeButton("Cancel", null)
 
         builder.create().show()
     }
+
 }

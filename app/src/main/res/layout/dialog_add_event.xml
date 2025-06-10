@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:hint="Date (e.g. June 10, 2025)"/>
 
+
     <EditText
         android:id="@+id/eventType"
         android:layout_width="match_parent"
