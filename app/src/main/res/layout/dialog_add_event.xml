@@ -6,34 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <EditText android:id="@+id/eventTitle"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="20dp"
+        android:text="Add New Event"
+        android:textColor="#6F4E37"
+        android:textSize="32sp" />
+
+    <EditText
+        android:id="@+id/eventTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title"/>
 
-    <EditText android:id="@+id/eventTime"
+    <EditText
+        android:id="@+id/eventTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Time (e.g. 12:30 PM)"/>
 
-    <EditText android:id="@+id/eventDate"
+    <EditText
+        android:id="@+id/eventDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Date (e.g. June 10, 2025)"/>
 
-    <EditText android:id="@+id/eventType"
+    <EditText
+        android:id="@+id/eventType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Event Type"/>
 
-    <EditText android:id="@+id/eventLocation"
+    <EditText
+        android:id="@+id/eventLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Location"/>
 
-    <EditText android:id="@+id/eventNotes"
+    <EditText
+        android:id="@+id/eventNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Notes"/>
-
 </LinearLayout>

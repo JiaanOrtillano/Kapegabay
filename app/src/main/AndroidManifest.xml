@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.projectkape">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -13,27 +17,23 @@
         android:theme="@style/Theme.ProjectKape"
         tools:targetApi="31">
 
-
         <activity android:name=".DashboardActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".Profile" />
         <activity android:name=".EditProfile" />
         <activity android:name=".FarmCalendar" />
-        <activity android:name="KnowledgeHub" />
-
+        <activity android:name=".KnowledgeHub" />
+        <activity android:name=".Home" />
 
         <activity
-            android:name=".Home"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
