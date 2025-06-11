@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <!-- CalendarView -->
-        <CalendarView
+        <com.applandeo.materialcalendarview.CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
