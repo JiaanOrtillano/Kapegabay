@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ProjectKape</string>
     <string name="user_profile">Profile Picture</string>
+
     <style name="FilterTabStyle">
         <item name="android:layout_marginHorizontal">12dp</item>
         <item name="android:textColor">#4CAF50</item>
@@ -19,4 +20,15 @@
         <item>Tagalog</item>
         <item>English</item>
     </string-array>
+    <string name="lorem_description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut ex eget purus tempus efficitur sed ac erat.
+    Ut eu mauris massa. Mauris urna nisi, scelerisque nec purus et, mollis tempor justo.
+    Mauris sagittis pretium odio non varius. Vestibulum mi ante, pellentesque in cursus quis, pharetra vel neque.
+    Nam sit amet auctor nibh. Fusce at eros at massa suscipit scelerisque.
+    Cras tortor nibh, sollicitudin a egestas vitae, tincidunt eu urna.
+    Nunc eleifend scelerisque odio, in eleifend dolor varius ut.
+    Pellentesque tristique risus ante, sed ultrices velit accumsan at.
+    Quisque et pulvinar lectus. Fusce non libero eu lectus dignissim semper a porta purus.
+</string>
+
 </resources>

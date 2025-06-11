@@ -1,18 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".KnowledgeHub">
 
-    <TextView
-        android:id="@+id/knowledge_title"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Knowledge Hub!"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Knowledge Hub"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#333333" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Search here"
+            android:background="@drawable/search_background"
+            android:padding="12dp"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="10dp"
+            android:inputType="text" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnUriNgKape"
+            style="@style/KnowledgeButton"
+            android:text="Mga uri ng kape" />
+
+        <Button
+            android:id="@+id/btnPaglipatTanim"
+            style="@style/KnowledgeButton"
+            android:text="Paglilipat-tanim" />
+
+        <Button
+            android:id="@+id/btnAbono"
+            style="@style/KnowledgeButton"
+            android:text="Pag-aabono (Fertilizing)" />
+
+        <Button
+            android:id="@+id/btnPruning"
+            style="@style/KnowledgeButton"
+            android:text="Pruning ng Kape (Maintenance Pruning)" />
+
+        <Button
+            android:id="@+id/btnRejuvenation"
+            style="@style/KnowledgeButton"
+            android:text="Rejuvenation" />
+
+        <Button
+            android:id="@+id/btnPagsusuri"
+            style="@style/KnowledgeButton"
+            android:text="Pagsusuri or Pagsasala( Sorting )" />
+
+        <Button
+            android:id="@+id/btnPagUuri"
+            style="@style/KnowledgeButton"
+            android:text="Pag-uuri ayon sa kalidad (Grading)" />
+
+        <Button
+            android:id="@+id/btnPagsasangag"
+            style="@style/KnowledgeButton"
+            android:text="Pagsasangag (Roasting)" />
+
+        <Button
+            android:id="@+id/btnDefects"
+            style="@style/KnowledgeButton"
+            android:text="Mga Depekto sa Kape (Coffee defects)" />
+
+        <Button
+            android:id="@+id/btnPeste"
+            style="@style/KnowledgeButton"
+            android:text="Pagkontrol sa mga Peste at Sakit" />
+
+    </LinearLayout>
+</ScrollView>
