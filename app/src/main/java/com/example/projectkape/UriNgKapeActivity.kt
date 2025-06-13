@@ -1,4 +1,5 @@
-package com.example.digikulturas
+package com.example.projectkape
+
 
 import android.os.Bundle
 import android.widget.Toast

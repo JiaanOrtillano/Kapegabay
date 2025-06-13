@@ -20,7 +20,6 @@ class Profile : AppCompatActivity() {
         )
         spinner.adapter = adapter
 
-        // Load ngani
         val sharedPreferences = getSharedPreferences("ProfileData", MODE_PRIVATE)
         val name = sharedPreferences.getString("name", "Florian Laika")
         val address = sharedPreferences.getString("address", "Brgy. Bagong Bukid, Santa Maria, Laguna")

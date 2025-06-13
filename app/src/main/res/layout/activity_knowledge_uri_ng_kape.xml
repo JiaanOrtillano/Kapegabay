@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".KnowledgeHub">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/menuBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="end"
+                android:text="Mga  Uri ng kape"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnRobusta"
+            style="@style/KnowledgeButton"
+            android:text="Robusta" />
+
+        <Button
+            android:id="@+id/btnExcelsa"
+            style="@style/KnowledgeButton"
+            android:text="Excelsa" />
+
+        <Button
+            android:id="@+id/btnArabica"
+            style="@style/KnowledgeButton"
+            android:text="Arabica" />
+
+        <Button
+            android:id="@+id/btnLiberica"
+            style="@style/KnowledgeButton"
+            android:text="Liberica" />
+
+
+
+    </LinearLayout>
+</ScrollView>
