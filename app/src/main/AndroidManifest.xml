@@ -25,6 +25,10 @@
         <activity android:name=".KnowledgeHub" />
         <activity android:name=".Home" />
         <activity android:name=".UriNgKapeActivity" />
+        <activity android:name=".KnowledgeDetailActivity" />
+        <activity android:name=".KnowledgeUriNgKapeActivity" />
+        <activity android:name=".NotificationsActivity" />
+
 
         <activity
             android:name=".MainActivity"

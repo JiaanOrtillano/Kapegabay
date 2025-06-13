@@ -38,7 +38,6 @@ class FarmCalendar : AppCompatActivity() {
 
         loadEventsFromFirestore()
 
-        // ✅ Corrected: Using the valid method `onClick` from the interface
         calendarView.setOnCalendarDayClickListener(object : OnCalendarDayClickListener {
             override fun onClick(calendarDay: CalendarDay) {
                 val calendar = calendarDay.calendar

@@ -18,21 +18,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        // Bind UI components
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.login_bt)
-        tvSignUp = findViewById(R.id.login_bt)  // Make sure this ID exists in your layout
+        tvSignUp = findViewById(R.id.btnSignup)
 
-        // Navigate to Sign Up screen
         tvSignUp.setOnClickListener {
             startActivity(Intent(this, SignUp::class.java))
         }
 
-        // Login logic
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString()
@@ -42,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Sign in with Firebase Auth
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {

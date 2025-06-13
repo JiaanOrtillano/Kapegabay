@@ -37,9 +37,7 @@ class DatabaseHelper(context: Context) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        // Drop existing table
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
-        // Recreate table with updated schema including email column
         onCreate(db)
     }
 

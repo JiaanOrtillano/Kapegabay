@@ -18,7 +18,6 @@ class SignUp : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_signup)
 
-        // Initialize Firebase
         firestore = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
 
@@ -59,7 +58,6 @@ class SignUp : AppCompatActivity() {
                             "address" to address
                         )
 
-                        // Save user data to Firestore
                         firestore.collection("users")
                             .document(userId)
                             .set(user)

@@ -4,5 +4,5 @@ data class CardItem(
     val title: String,
     val description: String,
     val imageResId: Int,
-    val tagLabel: String // "short", "vlog", etc.
+    val tagLabel: String
 )

@@ -1,3 +1,5 @@
+package com.example.projectkape
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -5,10 +7,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projectkape.CardItem
-import com.example.projectkape.R
 
-class CardAdapter(private val itemList: List<CardItem>) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
+class CardAdapter(private var itemList: List<CardItem>) :
+    RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.title)
@@ -26,9 +27,15 @@ class CardAdapter(private val itemList: List<CardItem>) : RecyclerView.Adapter<C
         val item = itemList[position]
         holder.title.text = item.title
         holder.description.text = item.description
-        holder.thumbnail.setImageResource(item.imageResId) // For URL, use Glide/Picasso
+        holder.thumbnail.setImageResource(item.imageResId)
         holder.tagButton.text = item.tagLabel
     }
 
     override fun getItemCount(): Int = itemList.size
+
+    // ✅ New method for filtering and updating the list
+    fun updateList(newList: List<CardItem>) {
+        itemList = newList
+        notifyDataSetChanged()
+    }
 }
