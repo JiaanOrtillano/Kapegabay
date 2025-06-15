@@ -35,16 +35,15 @@ class KnowledgeDetailActivity : AppCompatActivity() {
         imageView = findViewById(R.id.detailImage)
         progressBar = findViewById(R.id.progressBar)
 
-        // Get title from intent
-        val title = intent.getStringExtra("title").orEmpty()
+        // Get coffee_type from intent (sent from KnowledgeHub)
+        val coffeeType = intent.getStringExtra("title").orEmpty()
 
-        if (title.isNotBlank()) {
-            titleTextView.text = title
+        if (coffeeType.isNotBlank()) {
             subtitleTextView.text = "Nilalaman"
-            fetchKnowledgeFromFirestore(title)
+            fetchKnowledgeFromFirestore(coffeeType)
         } else {
-            subtitleTextView.text = "Walang Pamagat"
-            descriptionTextView.text = "Walang impormasyon."
+            titleTextView.text = "Walang Pamagat"
+            subtitleTextView.text = "Walang impormasyon."
             progressBar.visibility = View.GONE
         }
 
@@ -53,25 +52,27 @@ class KnowledgeDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun fetchKnowledgeFromFirestore(title: String) {
+    private fun fetchKnowledgeFromFirestore(coffeeType: String) {
         progressBar.visibility = View.VISIBLE
         descriptionTextView.text = ""
 
         db.collection("knowledgecollections")
-            .whereEqualTo("title", title)
+            .whereEqualTo("coffee_type", coffeeType)
             .limit(1)
             .get()
             .addOnSuccessListener { documents ->
                 progressBar.visibility = View.GONE
                 if (!documents.isEmpty) {
                     val doc = documents.first()
+                    val title = doc.getString("title").orEmpty()
                     val description = doc.getString("description").orEmpty()
                     val imagePath = doc.getString("image").orEmpty()
 
+                    titleTextView.text = if (title.isNotBlank()) title else coffeeType
                     descriptionTextView.text = if (description.isNotBlank()) description else "Walang nilalaman."
 
                     if (imagePath.isNotBlank()) {
-                        val imageUrl = "https://yourdomain.com$imagePath" // Replace with your full domain
+                        val imageUrl = "https://yourdomain.com$imagePath" // Update this as needed
                         Glide.with(this)
                             .load(imageUrl)
                             .into(imageView)
@@ -80,6 +81,7 @@ class KnowledgeDetailActivity : AppCompatActivity() {
                     }
 
                 } else {
+                    titleTextView.text = coffeeType
                     descriptionTextView.text = "Hindi natagpuan ang kaalaman."
                 }
             }

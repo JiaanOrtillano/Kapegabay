@@ -30,6 +30,9 @@
         <activity android:name=".NotificationsActivity" />
         <activity android:name=".FormsActivity" />
         <activity android:name=".SupportActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".RsbaFormActivity" />
+        <activity android:name=".InsuranceFormActivity" />
 
 
         <activity
