@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F1EA"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="9dp"
+            android:layout_marginTop="35dp">
+
+            <ImageButton
+                android:id="@+id/menuBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:padding="8dp"
+                android:text="Support"
+                android:textColor="#6F4E37"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <!-- Coffee Logo -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_coffee"
+                android:contentDescription="Coffee Logo"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/aboutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tungkol sa Gabay Kape"
+                android:textColor="#6F4E37"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- About Description -->
+            <TextView
+                android:id="@+id/aboutDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ang Gabay Kape ay isang mobile application na naglalayong bigyan ng kaalaman, suporta, at gabay ang mga magsasakang Pilipino sa kanilang pagtatanim at pag-aalaga ng kape. Layunin nitong itaguyod ang sustainable farming practices at mapabuti ang kalidad ng produksyon ng kape sa bansa."
+                android:textColor="#6F4E37"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
