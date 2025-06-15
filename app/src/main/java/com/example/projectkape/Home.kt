@@ -1,6 +1,5 @@
 package com.example.projectkape
 
-import com.example.projectkape.CardAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -41,7 +40,15 @@ class Home : AppCompatActivity() {
             "Composting 101",
             "Turn waste into gold!",
             R.drawable.image_31,
-            "Vlog"
+            "Vlog",
+            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        ),
+        CardItem(
+            "Coffee Vlog Ep. 2",
+            "Another guide on composting with coffee waste.",
+            R.drawable.image_31,
+            "Vlog",
+            "https://www.youtube.com/embed/aBc123Xyz"
         )
     )
 
@@ -58,17 +65,15 @@ class Home : AppCompatActivity() {
         adapter = CardAdapter(items)
         recyclerView.adapter = adapter
 
-        // Menu button
+        // Navigation menu buttons
         findViewById<ImageView>(R.id.menu_button).setOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
         }
-
-        // Profile button
         findViewById<ImageView>(R.id.menuProfile).setOnClickListener {
             startActivity(Intent(this, Profile::class.java))
         }
 
-        // Navigation drawer
+        // Navigation links
         findViewById<TextView>(R.id.nav_home).setOnClickListener {
             drawerLayout.closeDrawer(GravityCompat.START)
         }
@@ -91,7 +96,7 @@ class Home : AppCompatActivity() {
             startActivity(Intent(this, AboutActivity::class.java))
         }
 
-        // Filter tabs
+        // Category filters
         findViewById<TextView>(R.id.tab_all).setOnClickListener {
             currentCategory = "All"
             filterItems()
@@ -105,7 +110,7 @@ class Home : AppCompatActivity() {
             filterItems()
         }
 
-        // Search listener
+        // Live search
         searchBar.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 filterItems()
@@ -121,10 +126,19 @@ class Home : AppCompatActivity() {
 
         val filtered = items.filter {
             val matchesCategory = currentCategory == "All" || it.tagLabel == currentCategory
-            val matchesSearch = query.isEmpty() || it.title.contains(query, true) || it.description.contains(query, true)
+            val matchesSearch = query.isEmpty() ||
+                    it.title.contains(query, ignoreCase = true) ||
+                    it.description.contains(query, ignoreCase = true)
             matchesCategory && matchesSearch
         }
 
-        adapter.updateList(filtered)
+        // Show only vlog items that have a YouTube URL
+        val result = if (currentCategory == "Vlog") {
+            filtered.filter { it.youtubeUrl != null }
+        } else {
+            filtered
+        }
+
+        adapter.updateList(result)
     }
 }
