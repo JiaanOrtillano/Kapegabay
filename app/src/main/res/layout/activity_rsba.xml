@@ -126,7 +126,6 @@
             <EditText android:id="@+id/gross_income" android:hint="Gross Annual Income Last Year" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Submit Button -->
         <Button android:id="@+id/submit_button" android:text="Submit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" />
 
     </LinearLayout>
