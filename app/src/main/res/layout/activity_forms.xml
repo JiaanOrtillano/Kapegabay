@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="9dp">
+
+            <ImageButton
+                android:id="@+id/menuBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:padding="8dp"
+                android:text="Form"
+                android:textColor="#6F4E37"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- SECTION: Personal Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText android:id="@+id/surname" android:hint="Surname" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/first_name" android:hint="First Name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/middle_name" android:hint="Middle Name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/extension_name" android:hint="Extension Name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex:" />
+            <RadioGroup android:id="@+id/sex_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/male" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Male" />
+                <RadioButton android:id="@+id/female" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Female" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- SECTION: Address -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <EditText android:id="@+id/house_no" android:hint="House/Lot/Blk No./Purok" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/street" android:hint="Street/Sitio/Subdivision" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/barangay" android:hint="Barangay" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/municipality" android:hint="Municipality/City" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/province" android:hint="Province" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/region" android:hint="Region" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SECTION: Contact -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <EditText android:id="@+id/mobile" android:hint="Mobile Number" android:inputType="phone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/landline" android:hint="Landline Number" android:inputType="phone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SECTION: Birth and Civil Info -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <EditText android:id="@+id/date_of_birth" android:hint="Date of Birth (MM/DD/YYYY)" android:inputType="date" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/place_of_birth" android:hint="Place of Birth" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/religion" android:hint="Religion" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Civil Status:" />
+            <RadioGroup android:id="@+id/civil_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/single" android:text="Single" />
+                <RadioButton android:id="@+id/married" android:text="Married" />
+                <RadioButton android:id="@+id/widowed" android:text="Widowed" />
+                <RadioButton android:id="@+id/separated" android:text="Separated" />
+            </RadioGroup>
+
+            <EditText android:id="@+id/spouse_name" android:hint="Spouse Name (if married)" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/mother_maiden" android:hint="Mother's Maiden Name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SECTION: Household -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <CheckBox android:id="@+id/household_head" android:text="Household Head?" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/household_members" android:hint="# of Household Members" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/male_members" android:hint="# of Male" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/female_members" android:hint="# of Female" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SECTION: Education and ID -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <EditText android:id="@+id/highest_education" android:hint="Highest Educational Attainment" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/pwd" android:text="Person With Disability (PWD)" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/beneficiary_4ps" android:text="4Ps Beneficiary?" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/indigenous" android:text="Member of Indigenous Group?" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/government_id" android:hint="Government ID Type" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/id_number" android:hint="ID Number" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/farmer_org" android:text="Member of Farmer Org./Coop?" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SECTION: Emergency Contact -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <EditText android:id="@+id/notify_name" android:hint="Person to Notify in Emergency" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/notify_contact" android:hint="Contact Number" android:inputType="phone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SECTION: Farm Profile -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:text="Main Livelihood" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioGroup android:id="@+id/livelihood_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/farmer" android:text="Farmer" />
+                <RadioButton android:id="@+id/farmworker" android:text="Farmworker/Laborer" />
+                <RadioButton android:id="@+id/fisherfolk" android:text="Fisherfolk" />
+                <RadioButton android:id="@+id/agri_youth" android:text="Agri Youth" />
+            </RadioGroup>
+
+            <EditText android:id="@+id/farming_type" android:hint="Type of Farming Activity" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/farming_kind" android:hint="Kind of Work" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/fishing_type" android:hint="Type of Fishing Activity" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/gross_income" android:hint="Gross Annual Income Last Year" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Submit Button -->
+        <Button android:id="@+id/submit_button" android:text="Submit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -28,6 +28,8 @@
         <activity android:name=".KnowledgeDetailActivity" />
         <activity android:name=".KnowledgeUriNgKapeActivity" />
         <activity android:name=".NotificationsActivity" />
+        <activity android:name=".FormsActivity" />
+        <activity android:name=".SupportActivity" />
 
 
         <activity

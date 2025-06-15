@@ -6,11 +6,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
 
 class KnowledgeHub : AppCompatActivity() {
 
     private lateinit var searchBar: EditText
     private lateinit var buttonsMap: Map<Button, String>
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,14 +39,11 @@ class KnowledgeHub : AppCompatActivity() {
         // Set listeners for each button
         for ((button, title) in buttonsMap) {
             button.setOnClickListener {
-                val intent = if (title == "Mga uri ng kape") {
-                    Intent(this, KnowledgeUriNgKapeActivity::class.java)
+                if (title == "Mga uri ng kape") {
+                    startActivity(Intent(this, KnowledgeUriNgKapeActivity::class.java))
                 } else {
-                    Intent(this, KnowledgeDetailActivity::class.java).apply {
-                        putExtra("title", title)
-                    }
+                    fetchAndOpenDetail(title)
                 }
-                startActivity(intent)
             }
         }
 
@@ -55,16 +54,38 @@ class KnowledgeHub : AppCompatActivity() {
         setupSearchFilter()
     }
 
+    private fun fetchAndOpenDetail(title: String) {
+        db.collection("knowledgecollections")
+            .whereEqualTo("title", title)
+            .limit(1)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (!documents.isEmpty) {
+                    val doc = documents.first()
+                    val description = doc.getString("description").orEmpty()
+                    val image = doc.getString("image").orEmpty()
+
+                    val intent = Intent(this, KnowledgeDetailActivity::class.java).apply {
+                        putExtra("title", title)
+                        putExtra("description", description)
+                        putExtra("image", image)
+                    }
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Hindi natagpuan ang kaalaman.", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
     private fun setupSearchFilter() {
         searchBar.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 val query = s.toString().lowercase()
                 for ((button, title) in buttonsMap) {
-                    if (title.lowercase().contains(query)) {
-                        button.visibility = Button.VISIBLE
-                    } else {
-                        button.visibility = Button.GONE
-                    }
+                    button.visibility = if (title.lowercase().contains(query)) Button.VISIBLE else Button.GONE
                 }
             }
 
