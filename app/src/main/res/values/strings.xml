@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjectKape</string>
+    <string name="app_name">Gabay Kape</string>
     <string name="user_profile">Profile Picture</string>
 
     <style name="FilterTabStyle">
