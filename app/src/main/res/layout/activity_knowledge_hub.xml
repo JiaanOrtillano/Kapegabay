@@ -10,7 +10,7 @@
     android:padding="16dp"
     tools:context=".KnowledgeHub">
 
-    <!-- Static UI -->
+    <!-- Back Button and Title -->
     <ImageButton
         android:id="@+id/menuBack"
         android:layout_width="48dp"
@@ -32,6 +32,7 @@
         android:layout_marginBottom="12dp"
         android:textColor="#333333" />
 
+    <!-- Search Bar -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,17 +54,134 @@
             android:backgroundTint="@android:color/transparent" />
     </androidx.cardview.widget.CardView>
 
-    <!-- Scrollable Dynamic List -->
+    <!-- Static and Dynamic Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
         <LinearLayout
-            android:id="@+id/knowledgeContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:orientation="vertical">
 
+            <!-- Dynamic Content Container -->
+            <LinearLayout
+                android:id="@+id/knowledgeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Static Button -->
+                <Button
+                    android:id="@+id/btnUriNgKape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mga Uri ng Kape"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnPaglilipattanim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paglilipat-tanim"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnFertilize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pag-aabono (Feritilizing)"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnRejuvenation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rejuvenation"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnSortig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pagsusuri or Pagsasala( Sorting )"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnGrading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pag-uuri ayon sa kalidad (Grading) "
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnRoasting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pagsasangang (Roasting)"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnDefects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mga Depekto sa Kape (Coffee defects"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnSickControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pagkontrol sa mga Peste at Sakit"
+                    android:backgroundTint="@color/mrown"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -72,7 +72,7 @@ class KnowledgeDetailActivity : AppCompatActivity() {
                     descriptionTextView.text = if (description.isNotBlank()) description else "Walang nilalaman."
 
                     if (imagePath.isNotBlank()) {
-                        val imageUrl = "https://yourdomain.com$imagePath" // Update this as needed
+                        val imageUrl = "https://goravels.thejust10academy.com/$imagePath" // Update this as needed
                         Glide.with(this)
                             .load(imageUrl)
                             .into(imageView)
