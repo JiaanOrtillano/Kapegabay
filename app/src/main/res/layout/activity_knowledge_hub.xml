@@ -32,7 +32,7 @@
         android:layout_marginBottom="12dp"
         android:textColor="#333333" />
 
-    <!-- Search Bar -->
+    <!-- Search Bar with Autocomplete -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/searchBar"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -51,7 +51,8 @@
             android:padding="12dp"
             android:drawablePadding="10dp"
             android:inputType="text"
-            android:backgroundTint="@android:color/transparent" />
+            android:backgroundTint="@android:color/transparent"
+            android:completionThreshold="1" />
     </androidx.cardview.widget.CardView>
 
     <!-- Static and Dynamic Content -->
@@ -72,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Static Button -->
+                <!-- Static Buttons -->
                 <Button
                     android:id="@+id/btnUriNgKape"
                     android:layout_width="match_parent"
@@ -161,7 +162,7 @@
                     android:id="@+id/btnDefects"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mga Depekto sa Kape (Coffee defects"
+                    android:text="Mga Depekto sa Kape (Coffee defects)"
                     android:backgroundTint="@color/mrown"
                     android:textColor="#FFFFFF"
                     android:layout_marginTop="8dp"
