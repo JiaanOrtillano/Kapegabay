@@ -34,20 +34,7 @@ class Home : AppCompatActivity() {
             R.drawable.image_31,
             "Videos"
         ),
-        CardItem(
-            "Composting 101",
-            "Turn waste into gold!",
-            R.drawable.image_31,
-            "Vlog",
-            "https://www.youtube.com/embed/dQw4w9WgXcQ"
-        ),
-        CardItem(
-            "Coffee Vlog Ep. 2",
-            "Another guide on composting with coffee waste.",
-            R.drawable.image_31,
-            "Vlog",
-            "https://www.youtube.com/embed/aBc123Xyz"
-        )
+
     )
 
     private val suggestions = listOf(
@@ -174,10 +161,7 @@ class Home : AppCompatActivity() {
             currentCategory = "Videos"
             filterItems()
         }
-        findViewById<TextView>(R.id.tab_vlog).setOnClickListener {
-            currentCategory = "Vlog"
-            filterItems()
-        }
+
     }
 
     private fun handleSearchSuggestion(query: String) {
