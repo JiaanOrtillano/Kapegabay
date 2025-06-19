@@ -30,5 +30,13 @@
     Pellentesque tristique risus ante, sed ultrices velit accumsan at.
     Quisque et pulvinar lectus. Fusce non libero eu lectus dignissim semper a porta purus.
 </string>
+    <string name="Pagtatanim_ng_Kape_Liberica_Monocropping">
+        Pagtatanim ng Kape (Liberica) – Monocropping
+    </string>
+    <string name="Pagtatanim_ng_Kape_Liberica_Monocropping_desription">
+        Bago magtanim ng mga punong kape, kailangang maitanim at maayos na tumubo muna ang mga punong lilim (shade trees)
+        isang taon bago itanim ang kape. Iwasang magtanim ng shade trees kasabay o pagkatapos ng punla ng kape.
+    </string>
+
 
 </resources>
