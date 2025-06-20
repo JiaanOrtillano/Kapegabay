@@ -30,5 +30,40 @@
     Pellentesque tristique risus ante, sed ultrices velit accumsan at.
     Quisque et pulvinar lectus. Fusce non libero eu lectus dignissim semper a porta purus.
 </string>
+    <string name="Pagtatanim_ng_Kape_Liberica_Monocropping">
+        Pagtatanim ng Kape (Liberica) – Monocropping
+    </string>
+    <string name="Pagtatanim_ng_Kape_Liberica_Monocropping_desription">
+        Bago magtanim ng mga punong kape, kailangang maitanim at maayos na tumubo muna ang mga punong lilim (shade trees)
+        isang taon bago itanim ang kape. Iwasang magtanim ng shade trees kasabay o pagkatapos ng punla ng kape.
+    </string>
+    <string name="Pag_aabono_Fertilizing">
+        Ang mga gamit sa sakahan tulad ng tubig, abono, kemikal, at organikong pataba ay hindi dapat naglalaman ng mikrobyo o delikadong kemikal tulad ng heavy metals (hal. cadmium, mercury, lead, at nickel). Ang abono ay anumang materyal o halo na nagbibigay ng mahahalagang sustansya sa halaman.
+Ang paggamit ng abono, lalo na ang natural o komersyal na organikong pataba, ay kailangang kontrolado upang maiwasan ang posibleng kontaminasyon ng mikrobyo o kemikal.
+Kung ang abono ay napatunayang kontaminado ng mga mapanganib na sangkap gaya ng cadmium o mercury, hindi ito dapat gamitin. Bawal gumamit ng hindi pa naayos na dumi ng hayop (solid o liquid manure) dahil maaaring magtagal sa lupa ang mga mikrobyong sanhi ng sakit.
+Kung ang pataba ay ginagawa mismo sa sakahan (hal. compost), kailangang sumunod sa tamang proseso ng composting upang patayin ang mga mikrobyo at maiwasan ang kontaminasyon. Dapat ay may tala ng mga ginamit na materyales at ng proseso ng composting.
+Ang lugar ng composting ay dapat nasa mababang bahagi ng sakahan upang maiwasan ang pag-agos ng tubig papunta sa taniman.
+Ang mga tala sa paggamit ng abono ay dapat maglaman ng:
+Pinagmulan at sangkap ng abono
+Petsa at dalas ng paglalagay
+Lugar kung saan inilagay
+Bawal gumamit ng dumi o ihi ng tao. Mahalaga rin ang soil analysis bilang basehan sa paglalagay ng abono.
+
+
+Gumamit lamang ng rehistrado at tamang agricultural chemicals, at sundin ang tagubilin ng manufacturer. Lahat ng organikong at di-organikong abono ay dapat gamitin nang wasto.
+Ang mga abono ay kailangang may malinaw na label at nakalagay sa ligtas na lugar upang maiwasan ang pagkakontamina ng kapaligiran.
+
+Unit
+Complete Fertilizer (14-14-14)
+grams/tree
+75
+
+kgs/ha
+124
+    </string>
+
+
+
+
 
 </resources>
