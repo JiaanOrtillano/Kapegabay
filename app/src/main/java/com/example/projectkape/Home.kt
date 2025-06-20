@@ -105,11 +105,6 @@ class Home : AppCompatActivity() {
             currentCategory = "Videos"
             filterItems()
         }
-        findViewById<TextView>(R.id.tab_vlog).setOnClickListener {
-            currentCategory = "Vlog"
-            filterItems()
-        }
-
         // Live search
         searchBar.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
