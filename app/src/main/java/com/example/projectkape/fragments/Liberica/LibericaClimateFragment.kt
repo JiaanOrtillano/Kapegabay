@@ -25,7 +25,7 @@ class LibericaClimateFragment : Fragment() {
         }
 
         binding.backButton.setOnClickListener {
-            (activity as? com.example.projectkape.Libericatest)?.showPreviousFragment()
+            (activity as? com.example.projectkape.Liberica)?.showPreviousFragment()
         }
     }
 
