@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_info"
+
+        >
+
+
+        <TextView
+            android:id="@+id/descriptionText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Mga Kailangan sa Klima para sa Arabica (Climate requirements)"
+            android:textColor="#333333"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:text="Ang Arabica ay pinakamainam tumubo sa lugar na may taas na 900 hanggang 1,800 metro mula sa antas ng dagat, at may temperatura na 10 hanggang 20 degrees Celsius. Kailangan nito ng humigit-kumulang 50% na sikat ng araw, kaunting hangin, at halumigmig na 75% hanggang 90%. Ang tamang dami ng ulan ay mga 200 mm. Dapat ang lupa ay may pH na 5.6 hanggang 6.5, may lalim na hindi bababa sa 1.5 metro, at mayaman sa organikong bagay."
+            />
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/brown"
+            android:text="Susunod"
+            android:layout_marginTop="16dp" />
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="←"
+            android:backgroundTint="@color/brown"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+</ScrollView>

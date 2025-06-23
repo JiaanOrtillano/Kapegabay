@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_info"
+
+        >
+
+        <TextView
+            android:id="@+id/descriptionText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Pagtatanim ng Kape (Robusta) – Monocropping"
+            android:textColor="#333333"
+            android:textSize="20sp"
+
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:text="Bago magtanim ng mga punong kape, kailangang maitanim at maayos na tumubo muna ang mga punong lilim (shade trees) isang taon bago itanim ang kape. Iwasang magtanim ng shade trees kasabay o pagkatapos ng punla ng kape.
+"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Mga Hakbang sa Pagtatatag ng Tanimang Kape:"
+            android:textColor="#333333"
+            android:textSize="20sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:text="1.Paghahanda ng Lupa – Linisin nang mabuti ang bagong bukas na lugar. Alisin ang mga damo at mga punong kahoy, maliban sa mga maaaring gamitin bilang panangga sa hangin o lilim."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:text="2.Paglalatag, Pagtataya, at Paghukay ng Butas
+"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:text="3.Paglilipat-tanim (Transplanting)
+"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:text="4.Pag-aalis ng damo o paglalagay ng mulch
+"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Paglalatag/Pagtataya at Paghuhukay ng Butas"
+            android:textColor="#333333"
+            android:textSize="20sp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:text="Bago magtanim ng mga punong kape, kailangang maitanim at maayos na tumubo muna ang mga punong lilim (shade trees) isang taon bago itanim ang kape. Iwasang magtanim ng shade trees kasabay o pagkatapos ng punla ng kape."/>
+
+
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/brown"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+</ScrollView>
