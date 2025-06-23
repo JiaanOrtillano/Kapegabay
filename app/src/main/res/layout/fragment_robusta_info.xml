@@ -1,56 +1,42 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#FAFAFA"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- Top Bar -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
 
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginStart="8dp"
-            android:textColor="#333333"
-            android:text="Test text"/>
 
-    </LinearLayout>
-
-    <!-- Content Card -->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginTop="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/card_background_info"
-        android:padding="16dp"
-        android:elevation="4dp">
+
+        >
+
 
         <TextView
             android:id="@+id/descriptionText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_marginTop="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:gravity="center"
             android:text="Robusta (Coffee Robusta)"
-            android:textStyle="bold"
             android:textColor="#333333"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+
+            android:textStyle="bold" />q
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/robusta_tree" />
 
         <TextView
@@ -58,6 +44,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
             android:textColor="#333333"
             android:textSize="14sp"
             android:text="Ang Robusta ay kilala rin bilang kapeng manipis.Malakas ang lasa nito at mas mataas ang taglay na caffeine (2% hanggang 2.5%) kumpara sa Arabica. Mataas ang ani nito at mas matibay laban sa peste at sakit. Mas mainam itong tumutubo sa mga lugar na may taas na 600 hanggang 1,200 metro mula sa antas ng dagat, at temperatura na 13 hanggang 23°C.
@@ -66,11 +55,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="12dp"
             android:text="Ang punong Robusta ay may malapad na hugis-payong at umaabot ng hanggang 4.5 metro ang taas. Mababa ang sistema ng ugat (shallow), at ang pagbubulaklak nito ay nangyayari sa pamamagitan ng cross-pollination. Ang bulaklak ay kulay puti na may lima hanggang anim na talulot, habang ang mga dahon ay manipis at may alun-along gilid.
 "
+            android:layout_marginRight="20dp"
+            android:gravity="center"
             android:textColor="#333333"
             android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:src="@drawable/robusta1" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -78,9 +81,19 @@
             android:layout_marginTop="12dp"
             android:textColor="#333333"
             android:textSize="14sp"
+            android:layout_marginLeft="20dp"
             android:text="Ang punong Robusta ay may malapad na hugis-payong at umaabot ng hanggang 4.5 metro ang taas. Mababa ang sistema ng ugat (shallow), at ang pagbubulaklak nito ay nangyayari sa pamamagitan ng cross-pollination. Ang bulaklak ay kulay puti na may lima hanggang anim na talulot, habang ang mga dahon ay manipis at may alun-along gilid.
 "/>
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="@color/brown"
+            android:text="Susunod"
+            android:layout_marginTop="16dp" />
 
 
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

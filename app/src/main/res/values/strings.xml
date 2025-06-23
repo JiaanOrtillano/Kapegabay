@@ -8,6 +8,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="DrawerMenuItem">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -16,6 +17,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:drawablePadding">16dp</item>
     </style>
+
     <string-array name="language_options">
         <item>Tagalog</item>
         <item>English</item>
@@ -61,9 +63,6 @@ grams/tree
 kgs/ha
 124
     </string>
-
-
-
 
 
 </resources>
