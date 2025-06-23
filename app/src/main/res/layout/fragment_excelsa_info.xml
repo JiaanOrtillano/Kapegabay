@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_info"
+
+        >
+
+
+        <TextView
+            android:id="@+id/descriptionText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Excelsa (coffea excelsa)"
+            android:textColor="#333333"
+            android:textSize="30sp"
+
+            android:textStyle="bold" />
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/excelsa" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:text="Ang Excelsa, o kapeng makapal, ay may kakaibang lasa na parang halamang gamot. Tumutubo ito sa mga lugar na may taas na 600 hanggang 1,000 metro mula sa antas ng dagat at may temperaturang 10 hanggang 30°C.
+"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/excelsa_flowers" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Ang punong Excelsa ay may taas na 3 metro at may malalim na ugat (deep root system). Namumulaklak ito sa pamamagitan ng self-pollination, at ang mga bulaklak nito ay malalaki, kulay puti, at may apat hanggang anim na talulot. Ang mga dahon ay malapad at makapal, mas makinis at bilugan kaysa Liberica, at ang mga bagong dahon ay makintab at may kulay bronze-violet.
+"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/fruits__berries_excelsa" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Ang bunga ay nagsisiksikan sa kumpol, nagsisimulang mamunga pagkalipas ng tatlong taon mula sa paglipat-tanim. Magkakaiba ang laki ng bunga — mas malaki kaysa Arabica pero mas maliit kaysa Liberica. Makakapal ang balat (pulp) at balat-loob (parchment) ng butil nito. Bukod dito, matibay rin ang Excelsa sa tagtuyot."
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="@color/brown"
+            android:text="Susunod"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+</ScrollView>

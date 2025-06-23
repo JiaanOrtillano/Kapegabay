@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_info"
+
+        >
+
+
+        <TextView
+            android:id="@+id/descriptionText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Arabica (coffea arabica)"
+            android:textColor="#333333"
+            android:textSize="30sp"
+
+            android:textStyle="bold" />
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/robusta_tree" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:text="Ang Arabica, na kilala rin bilang kapeng Tagalog, ang pinaka-karaniwang uri ng kape sa buong mundo dahil sa masarap nitong lasa at mabangong amoy. Mababa lang ang caffeine nito, nasa 0.8% hanggang 1.3%. Tumutubo ito sa mga mataas na lugar, mula 900 hanggang 1,800 metro mula sa antas ng dagat, kaya bagay ito sa malamig at mabundok na lugar tulad ng Mindanao at Cordillera.
+"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arabica_flower" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Ang punong Arabica ay may taas na 3 metro at may malalim na sistema ng ugat. Namumulaklak ito sa pamamagitan ng self-pollination, at ang mga bulaklak ay kulay puti hanggang creamy na may maiikling tangkay. Ang mga dahon nito ay may alun-alon sa gilid, kulay maliit na berde, at manipis. Nagsisimula itong mamunga pagkalipas ng dalawang hanggang tatlong taon mula sa paglipat-tanim.
+"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="@color/brown"
+            android:text="Susunod"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+</ScrollView>

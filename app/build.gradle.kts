@@ -35,6 +35,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    // ✅ Enable ViewBinding here:
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -51,18 +56,13 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-analytics")
-
-    implementation ("com.google.android.material:material:1.11.0")
+    implementation(libs.firebase.auth.ktx)
 
     // Image loading
     implementation("com.github.bumptech.glide:glide:4.15.1")
-    implementation(libs.firebase.auth.ktx)
 
-    // Card View
-    implementation ("androidx.cardview:cardview:1.0.0")
-
-    // Kalendaryo to
-    implementation ("com.applandeo:material-calendar-view:1.9.2")
+    // Calendar library
+    implementation("com.applandeo:material-calendar-view:1.9.2")
 
     // Testing
     testImplementation(libs.junit)
